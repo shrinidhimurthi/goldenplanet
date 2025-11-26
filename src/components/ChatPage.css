@@ -167,3 +167,44 @@
   color: #888;
   font-size: 1.2rem;
 }
+/* Mobile: only one view at a time like WhatsApp */
+@media (max-width: 768px) {
+  .chat-container {
+    flex-direction: column;
+    position: relative;
+  }
+
+  .contact-list,
+  .chat-window {
+    width: 100%;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    transition: transform 0.3s ease;
+    z-index: 10;
+  }
+
+  /* If chat is active, hide contact list */
+  .chat-container.active-chat .contact-list {
+    transform: translateX(-100%);
+  }
+
+  .chat-container.active-chat .chat-window {
+    transform: translateX(0);
+  }
+
+  /* If no chat is selected, hide chat window */
+  .chat-container:not(.active-chat) .chat-window {
+    transform: translateX(100%);
+  }
+
+  /* Back button */
+  .chat-header .back-btn {
+    display: inline-block;
+    cursor: pointer;
+    margin-right: 12px;
+    font-size: 1.2rem;
+    color: #fff;
+  }
+}

@@ -32,7 +32,7 @@ export default function ChatPage() {
   };
 
   return (
-    <div className="chat-container">
+    <div className={`chat-container ${activeChat ? "active-chat" : ""}`}>
       {/* LEFT CONTACT LIST */}
       <div className="contact-list">
         <h2>Chats</h2>
@@ -54,8 +54,11 @@ export default function ChatPage() {
         {activeChat ? (
           <>
             <div className="chat-header">
-              {contacts.find((c) => c.id === activeChat)?.name}
+             {/* Back button for mobile */}
+             <span className="back-btn" onClick={() => setActiveChat(null)}>←</span>
+             {contacts.find((c) => c.id === activeChat)?.name}
             </div>
+
 
             <div
               className="chat-messages"
