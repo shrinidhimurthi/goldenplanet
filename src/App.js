@@ -1,9 +1,12 @@
-// src/App.js
 import React from "react";
-import EditAd from "./components/EditAd";
+import ChatPage from "./components/ChatPage";  // adjust path if needed
 
 function App() {
-  return <EditAd />;
+  return (
+    <div style={{ height: "100vh" }}>
+      <ChatPage />
+    </div>
+  );
 }
 
 export default App;

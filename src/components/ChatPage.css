@@ -1,0 +1,169 @@
+/* ChatPage.css */
+
+/* Global container */
+.chat-container {
+  display: flex;
+  height: 100vh;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* Left contact list */
+.contact-list {
+  width: 30%;
+  background-color: #121b22; /* dark theme */
+  padding: 16px;
+  border-right: 1px solid #2a3a4a;
+  overflow-y: auto;
+}
+
+.contact-list h2 {
+  font-size: 1.25rem;
+  font-weight: bold;
+  margin-bottom: 16px;
+  color: #f5f5f5;
+}
+
+.contact-item {
+  padding: 12px;
+  margin-bottom: 12px;
+  border-radius: 12px;
+  cursor: pointer;
+  background-color: #1c2b36;
+  transition: background-color 0.2s;
+}
+
+.contact-item:hover {
+  background-color: #2a3a4a;
+}
+
+.contact-item.active {
+  background-color: #2a3a4a;
+}
+
+.contact-item .name {
+  font-weight: 600;
+  color: #fff;
+}
+
+.contact-item .last-msg {
+  font-size: 0.875rem;
+  color: #aaa;
+  margin-top: 2px;
+}
+
+.contact-item .time {
+  font-size: 0.75rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* Right chat window */
+.chat-window {
+  width: 70%;
+  display: flex;
+  flex-direction: column;
+  position: relative;
+}
+
+/* Chat header */
+.chat-header {
+  padding: 16px;
+  background-color: #075e54;
+  color: white;
+  font-size: 1.125rem;
+  font-weight: 600;
+  border-bottom: 1px solid #2a3a4a;
+}
+
+/* Messages area */
+.chat-messages {
+  flex: 1;
+  padding: 24px;
+  overflow-y: auto;
+  position: relative;
+}
+
+/* Overlay to make text readable */
+.chat-messages::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(255, 255, 255, 0.05); /* subtle overlay */
+  pointer-events: none;
+}
+
+.message {
+  margin-bottom: 12px;
+  display: flex;
+  position: relative;
+  z-index: 1;
+}
+
+.message.me {
+  justify-content: flex-end;
+}
+
+.message .bubble {
+  padding: 12px 16px;
+  max-width: 70%;
+  border-radius: 20px;
+  word-wrap: break-word;
+  box-shadow: 0px 1px 2px rgba(0,0,0,0.2);
+}
+
+.message.me .bubble {
+  background-color: #25d366; /* WhatsApp green */
+  color: white;
+  border-bottom-right-radius: 0;
+}
+
+.message.other .bubble {
+  background-color: #ece5dd;
+  color: black;
+  border-bottom-left-radius: 0;
+}
+
+/* Message input */
+.chat-input {
+  padding: 16px;
+  background-color: #f0f0f0;
+  border-top: 1px solid #ccc;
+  display: flex;
+  gap: 12px;
+}
+
+.chat-input input {
+  flex: 1;
+  padding: 12px 16px;
+  border-radius: 24px;
+  border: 1px solid #ccc;
+  outline: none;
+  font-size: 1rem;
+}
+
+.chat-input button {
+  padding: 12px;
+  border-radius: 50%;
+  background-color: #25d366; /* green send button */
+  border: none;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* Placeholder chat message when no chat selected */
+.no-chat {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #888;
+  font-size: 1.2rem;
+}
