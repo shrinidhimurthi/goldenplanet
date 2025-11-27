@@ -4,10 +4,11 @@
 
 .image-wrapper {
   width: 100%;
-  height: calc(100vh - 160px);
+  /* allow wrapper to size naturally but not exceed viewport height */
+  max-height: calc(100vh - 160px);
   overflow: auto; /* allow scrolling if image larger than viewport */
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   justify-content: center;
   background: #fff;
   padding: 16px;
@@ -15,10 +16,19 @@
 }
 
 .icleaf-image {
-  /* do not force scaling — render at natural pixel size */
-  width: auto;
+  /* scale down responsively but never upscale beyond natural size */
+  max-width: 100%;
   height: auto;
-  max-width: none;
-  image-rendering: auto;
   display: block;
+}
+
+/* Ensure comfortable padding on very small screens */
+@media (max-width: 480px) {
+  .subject-topic-page {
+    padding: 12px;
+  }
+
+  .image-wrapper {
+    padding: 8px;
+  }
 }
