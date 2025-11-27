@@ -150,7 +150,7 @@
 
 .map-container {
   display: grid;
-  grid-template-columns: 1fr;
+  grid-template-columns: 1fr 360px;
   gap: 40px;
   max-width: 1400px;
   margin: 0 auto;
@@ -180,6 +180,36 @@
   height: 100%;
   object-fit: cover;
   display: block;
+}
+
+/* Office Card (right column) */
+.office-card {
+  background: white;
+  padding: 22px;
+  border-radius: 12px;
+  box-shadow: 0 8px 30px rgba(0,0,0,0.06);
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.office-card h3 {
+  margin: 0 0 6px 0;
+  font-size: 1.25rem;
+  color: #2c3e50;
+}
+
+.office-item h4 {
+  margin: 0 0 6px 0;
+  font-size: 1rem;
+  color: #444;
+}
+
+.office-item address {
+  font-style: normal;
+  color: #555;
+  line-height: 1.45;
+  font-size: 0.95rem;
 }
 
 /* Location Pins on Map */

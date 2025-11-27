@@ -79,12 +79,52 @@ const Home = () => {
         <div className="map-container">
           <div className="world-map">
             {/* World Map Background Image */}
-            <img 
-              src={require('../../assets/ic-office-map.png')} 
-              alt="World Map" 
+            <img
+              src={require('../../assets/ic-office-map.png')}
+              alt="World Map"
               className="map-image"
             />
           </div>
+
+          <aside className="office-card">
+            <h3>Our Office Locations</h3>
+
+            <div className="office-item">
+              <h4>Chennai</h4>
+              <address>
+                Sri Ram Nivas, 3rd Floor, No.38,<br />
+                Venkatakrishna Road, Mandaveli,<br />
+                Chennai – 600028.
+              </address>
+            </div>
+
+            <div className="office-item">
+              <h4>Noida</h4>
+              <address>
+                H-187, Sector 63,<br />
+                Noida,<br />
+                Uttar Pradesh – 201 307.
+              </address>
+            </div>
+
+            <div className="office-item">
+              <h4>Infocareer®, Inc. (San Francisco)</h4>
+              <address>
+                548 Market Street,<br />
+                San Francisco,<br />
+                CA 94104
+              </address>
+            </div>
+
+            <div className="office-item">
+              <h4>ITCon – InfoCareer® Telis (Consortium) Ltd (Freetown)</h4>
+              <address>
+                37, Soldier Street,<br />
+                Freetown, Sierra Leone,<br />
+                West Africa.
+              </address>
+            </div>
+          </aside>
         </div>
       </section>
 
