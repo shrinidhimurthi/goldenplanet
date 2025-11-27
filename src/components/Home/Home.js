@@ -90,7 +90,7 @@ const Home = () => {
             <h3>Our Office Locations</h3>
 
             <div className="office-item">
-              <h4>Chennai</h4>
+              <h4>Chennai, India</h4>
               <address>
                 Sri Ram Nivas, 3rd Floor, No.38,<br />
                 Venkatakrishna Road, Mandaveli,<br />
@@ -99,7 +99,7 @@ const Home = () => {
             </div>
 
             <div className="office-item">
-              <h4>Noida</h4>
+              <h4>Noida, India</h4>
               <address>
                 H-187, Sector 63,<br />
                 Noida,<br />
@@ -108,7 +108,7 @@ const Home = () => {
             </div>
 
             <div className="office-item">
-              <h4>Infocareer®, Inc. (San Francisco)</h4>
+              <h4>Infocareer®, Inc. (San Francisco, USA)</h4>
               <address>
                 548 Market Street,<br />
                 San Francisco,<br />
@@ -117,7 +117,7 @@ const Home = () => {
             </div>
 
             <div className="office-item">
-              <h4>ITCon – InfoCareer® Telis (Consortium) Ltd (Freetown)</h4>
+              <h4>ITCon – InfoCareer® Telis (Consortium) Ltd (Freetown, Sierra Leone, Africa)</h4>
               <address>
                 37, Soldier Street,<br />
                 Freetown, Sierra Leone,<br />
