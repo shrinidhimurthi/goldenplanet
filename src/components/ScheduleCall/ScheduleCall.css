@@ -1,0 +1,373 @@
+/* Schedule Call Container */
+.schedule-call {
+  padding: 2rem;
+  background-color: #f8f9fa;
+  min-height: calc(100vh - 70px);
+}
+
+.schedule-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  animation: fadeInDown 0.8s ease;
+}
+
+.schedule-header h1 {
+  font-size: 2.5rem;
+  color: #333;
+  margin: 0 0 0.5rem 0;
+}
+
+.schedule-header p {
+  font-size: 1.1rem;
+  color: #666;
+  margin: 0;
+}
+
+/* Table Container */
+.schedule-container {
+  max-width: 1400px;
+  margin: 0 auto 3rem;
+  background: white;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+  padding: 2rem;
+  overflow-x: auto;
+}
+
+.table-responsive {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Schedule Table */
+.schedule-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.95rem;
+}
+
+.schedule-table thead {
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  position: sticky;
+  top: 0;
+}
+
+.day-header {
+  padding: 1rem;
+  text-align: center;
+  font-weight: 600;
+  border: 1px solid #e0e0e0;
+  font-size: 1rem;
+}
+
+/* Table Rows */
+.schedule-table tbody tr {
+  border-bottom: 2px solid #e0e0e0;
+}
+
+.schedule-table tbody tr:last-child {
+  border-bottom: 2px solid #ddd;
+}
+
+/* Table Cells */
+.schedule-table td {
+  padding: 1.2rem;
+  border: 1px solid #e0e0e0;
+  text-align: center;
+  background-color: #ffffff;
+  vertical-align: middle;
+}
+
+.schedule-table tbody tr:hover td {
+  background-color: #f8f9fa;
+}
+
+/* Date Input */
+.date-input {
+  width: 100%;
+  max-width: 140px;
+  padding: 0.6rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+}
+
+.date-input:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.date-cell {
+  background-color: #f0f7ff;
+}
+
+/* Mentor Select */
+.mentor-select {
+  width: 100%;
+  max-width: 140px;
+  padding: 0.6rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.mentor-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.mentor-cell {
+  background-color: #fff5f0;
+}
+
+/* Duration Select */
+.duration-select {
+  width: 100%;
+  max-width: 140px;
+  padding: 0.6rem;
+  border: 2px solid #e0e0e0;
+  border-radius: 6px;
+  font-size: 0.9rem;
+  cursor: pointer;
+  transition: border-color 0.3s ease;
+  box-sizing: border-box;
+  background-color: white;
+}
+
+.duration-select:focus {
+  outline: none;
+  border-color: #667eea;
+  box-shadow: 0 0 0 3px rgba(102, 126, 234, 0.1);
+}
+
+.duration-cell {
+  background-color: #f0fff5;
+}
+
+/* Action Button */
+.action-cell {
+  background-color: #fffbf0;
+}
+
+.book-btn {
+  padding: 0.7rem 1.5rem;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  color: white;
+  border: none;
+  border-radius: 6px;
+  font-weight: 600;
+  cursor: pointer;
+  font-size: 0.95rem;
+  transition: all 0.3s ease;
+  min-width: 100px;
+}
+
+.book-btn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(102, 126, 234, 0.4);
+}
+
+.book-btn:active {
+  transform: translateY(0);
+}
+
+/* Schedule Info Section */
+.schedule-info {
+  max-width: 1400px;
+  margin: 0 auto;
+  background: white;
+  padding: 2rem;
+  border-radius: 12px;
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.schedule-info h3 {
+  color: #333;
+  font-size: 1.5rem;
+  margin-top: 0;
+}
+
+.schedule-info ol {
+  color: #666;
+  line-height: 1.8;
+  padding-left: 2rem;
+}
+
+.schedule-info li {
+  margin: 0.8rem 0;
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* Tablet Responsive Design */
+@media (max-width: 768px) {
+  .schedule-call {
+    padding: 1.5rem 1rem;
+  }
+
+  .schedule-header h1 {
+    font-size: 1.8rem;
+  }
+
+  .schedule-header p {
+    font-size: 1rem;
+  }
+
+  .schedule-container {
+    padding: 1.5rem 1rem;
+    margin-bottom: 2rem;
+  }
+
+  .schedule-table {
+    font-size: 0.85rem;
+  }
+
+  .day-header {
+    padding: 0.8rem 0.5rem;
+    font-size: 0.9rem;
+  }
+
+  .schedule-table td {
+    padding: 0.8rem 0.5rem;
+  }
+
+  .date-input,
+  .mentor-select,
+  .duration-select {
+    max-width: 120px;
+    padding: 0.5rem;
+    font-size: 0.8rem;
+  }
+
+  .book-btn {
+    padding: 0.6rem 1rem;
+    font-size: 0.85rem;
+    min-width: 80px;
+  }
+
+  .schedule-info {
+    padding: 1.5rem 1rem;
+  }
+
+  .schedule-info h3 {
+    font-size: 1.3rem;
+  }
+}
+
+/* Mobile Responsive Design */
+@media (max-width: 480px) {
+  .schedule-call {
+    padding: 1rem;
+  }
+
+  .schedule-header h1 {
+    font-size: 1.5rem;
+    margin-bottom: 0.3rem;
+  }
+
+  .schedule-header p {
+    font-size: 0.9rem;
+  }
+
+  .schedule-container {
+    padding: 1rem;
+    margin-bottom: 1.5rem;
+    border-radius: 8px;
+  }
+
+  .schedule-table {
+    font-size: 0.75rem;
+  }
+
+  .day-header {
+    padding: 0.6rem 0.3rem;
+    font-size: 0.8rem;
+    font-weight: 500;
+  }
+
+  .schedule-table td {
+    padding: 0.6rem 0.3rem;
+  }
+
+  .date-input,
+  .mentor-select,
+  .duration-select {
+    max-width: 100%;
+    padding: 0.4rem;
+    font-size: 0.75rem;
+  }
+
+  .book-btn {
+    padding: 0.5rem 0.8rem;
+    font-size: 0.75rem;
+    min-width: 60px;
+    border-radius: 4px;
+  }
+
+  .schedule-info {
+    padding: 1.2rem 1rem;
+    border-radius: 8px;
+  }
+
+  .schedule-info h3 {
+    font-size: 1.2rem;
+  }
+
+  .schedule-info ol {
+    padding-left: 1.5rem;
+    font-size: 0.9rem;
+  }
+
+  .schedule-info li {
+    margin: 0.6rem 0;
+  }
+}
+
+/* Extra Small Devices */
+@media (max-width: 380px) {
+  .schedule-table {
+    font-size: 0.7rem;
+  }
+
+  .day-header {
+    padding: 0.5rem 0.2rem;
+    font-size: 0.7rem;
+  }
+
+  .schedule-table td {
+    padding: 0.5rem 0.2rem;
+  }
+
+  .date-input,
+  .mentor-select,
+  .duration-select {
+    padding: 0.3rem;
+    font-size: 0.7rem;
+  }
+
+  .book-btn {
+    padding: 0.4rem 0.6rem;
+    font-size: 0.65rem;
+    min-width: 50px;
+  }
+}
