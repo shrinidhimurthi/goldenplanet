@@ -4,6 +4,7 @@ import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
 import Home from './components/Home/Home';
 import ScheduleCall from './components/ScheduleCall/ScheduleCall';
+import SubjectTopic from './components/SubjectTopic/SubjectTopic';
 import './App.css';
 
 function App() {
@@ -36,6 +37,7 @@ function App() {
           <Routes>
             <Route path="/" element={<Home />} />
             <Route path="/schedule-call" element={<ScheduleCall />} />
+            <Route path="/subject-topic" element={<SubjectTopic />} />
             <Route path="/account" element={<div style={{ padding: '2rem' }}><h1>Account Page (Coming Soon)</h1></div>} />
             <Route path="/services" element={<div style={{ padding: '2rem' }}><h1>Services Page (Coming Soon)</h1></div>} />
             <Route path="/blog" element={<div style={{ padding: '2rem' }}><h1>Blog Page (Coming Soon)</h1></div>} />

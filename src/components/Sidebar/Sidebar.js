@@ -16,6 +16,7 @@ const Sidebar = ({ isOpen, onClose }) => {
     { label: 'Home', path: '/', icon: FaHome },
     { label: 'Account', path: '/account', icon: FaUser },
     { label: 'Schedule Call', path: '/schedule-call', icon: FaCalendarAlt },
+    { label: 'Subject/Topic', path: '/subject-topic', icon: FaBlog },
     { label: 'Services', path: '/services', icon: FaServicestack },
     { label: 'Blog', path: '/blog', icon: FaBlog },
   ];

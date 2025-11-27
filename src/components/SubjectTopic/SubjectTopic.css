@@ -1,0 +1,24 @@
+.subject-topic-page {
+  padding: 24px;
+}
+
+.image-wrapper {
+  width: 100%;
+  height: calc(100vh - 160px);
+  overflow: auto; /* allow scrolling if image larger than viewport */
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  background: #fff;
+  padding: 16px;
+  box-sizing: border-box;
+}
+
+.icleaf-image {
+  /* do not force scaling — render at natural pixel size */
+  width: auto;
+  height: auto;
+  max-width: none;
+  image-rendering: auto;
+  display: block;
+}
