@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import {
   FaUserTie,
   FaChartLine,
@@ -8,22 +8,23 @@ import {
   FaMapMarkerAlt,
 } from 'react-icons/fa';
 import './Home.css';
+import mapImg from '../../assets/ic-office-map.png';
 
 const Home = () => {
-  const services = [
+  const [services, setServices] = useState([
     { icon: FaUserTie, label: 'Mentoring', color: '#667eea' },
     { icon: FaChartLine, label: 'Consulting', color: '#764ba2' },
     { icon: FaTachometerAlt, label: 'Tech Agile', color: '#f093fb' },
     { icon: FaCloudUploadAlt, label: 'Salesforce', color: '#4facfe' },
     { icon: FaDatabase, label: 'Data Annotation', color: '#00f2fe' },
-  ];
+  ]);
 
-  const offices = [
+  const [offices, setOffices] = useState([
     { city: 'San Francisco', country: 'USA', posX: '25%', posY: '30%' },
     { city: 'Sierra Leone', country: 'Africa', posX: '45%', posY: '60%' },
     { city: 'Noida', country: 'India', posX: '72%', posY: '50%' },
     { city: 'Chennai', country: 'India', posX: '75%', posY: '65%' },
-  ];
+  ]);
 
   return (
     <div className="home">
@@ -80,7 +81,7 @@ const Home = () => {
           <div className="world-map">
             {/* World Map Background Image */}
             <img
-              src={require('../../assets/ic-office-map.png')}
+              src={mapImg}
               alt="World Map"
               className="map-image"
             />
@@ -96,6 +97,17 @@ const Home = () => {
                 Venkatakrishna Road, Mandaveli,<br />
                 Chennai – 600028.
               </address>
+              <div className="office-actions">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    'Sri Ram Nivas, 3rd Floor, No.38, Venkatakrishna Road, Mandaveli, Chennai 600028'
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
 
             <div className="office-item">
@@ -105,24 +117,59 @@ const Home = () => {
                 Noida,<br />
                 Uttar Pradesh – 201 307.
               </address>
+              <div className="office-actions">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    'H-187 Sector 63 Noida Uttar Pradesh 201307'
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
 
             <div className="office-item">
-              <h4>Infocareer®, Inc. (San Francisco, USA)</h4>
+              <h4>San Francisco, USA</h4>
               <address>
+                InfoCareer®, Inc.<br />
                 548 Market Street,<br />
                 San Francisco,<br />
                 CA 94104
               </address>
+              <div className="office-actions">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    '548 Market Street San Francisco CA 94104'
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
 
             <div className="office-item">
-              <h4>ITCon – InfoCareer® Telis (Consortium) Ltd (Freetown, Sierra Leone, Africa)</h4>
+              <h4>Freetown, Sierra Leone, Africa</h4>
               <address>
+                ITCon – InfoCareer® Telis (Consortium) Ltd / InfoCareer®, Inc.<br />
                 37, Soldier Street,<br />
                 Freetown, Sierra Leone,<br />
                 West Africa.
               </address>
+              <div className="office-actions">
+                <a
+                  href={`https://www.google.com/maps/search/?api=1&query=${encodeURIComponent(
+                    '37 Soldier Street Freetown Sierra Leone'
+                  )}`}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  Open in Google Maps
+                </a>
+              </div>
             </div>
           </aside>
         </div>
@@ -152,7 +199,7 @@ const Home = () => {
           </div>
         </div>
         <div className="footer-bottom">
-          <p>&copy; 2024 InfoCareer. All rights reserved.</p>
+          <p>&copy; 2025 InfoCareer. All rights reserved.</p>
         </div>
       </footer>
     </div>
