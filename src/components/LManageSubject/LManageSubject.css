@@ -131,7 +131,7 @@
 .card {
   background: #fff;
   border-radius: 6px;
-  padding: 16px;
+  padding: 20px;
   border: 1px solid #ddd;
 }
 .card-title {
@@ -188,4 +188,25 @@
     font-size: 14px;
     padding: 8px 12px;
   }
+}
+
+/* datatable styling */
+.rdt_Table {
+  border-radius: 8px;
+  overflow: hidden;
+  border: 1px solid #e8edf0;
+}
+
+.rdt_TableHeadRow {
+  background: #f9fafb;
+  font-weight: 700;
+  color: #333;
+}
+
+.rdt_TableRow:hover {
+  background: rgba(123, 76, 255, 0.04);
+}
+
+.rdt_Pagination {
+  border-top: 1px solid #e8edf0;
 }
