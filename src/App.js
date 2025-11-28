@@ -1,4 +1,18 @@
-import React, { useState, useEffect } from 'react';
+// src/App.js
+import React from "react";
+import LManageSubject from "./components/LManageSubject/LManageSubject";
+
+function App() {
+  return (
+    <div className="App">
+      <LManageSubject />
+    </div>
+  );
+}
+
+export default App;
+
+/* import React, { useState, useEffect } from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
@@ -46,6 +60,4 @@ function App() {
   );
 }
 
-export default App;
-
-
+export default App; */
