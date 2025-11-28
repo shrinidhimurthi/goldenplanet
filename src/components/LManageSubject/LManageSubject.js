@@ -10,7 +10,7 @@ export default function LManageSubject() {
   const [query, setQuery] = useState("");
 
   const subjects = [
-     { id: 1, name: "Altest", topics: 1 },
+  { id: 1, name: "Altest", topics: 1 },
   { id: 2, name: "Avengers", topics: 6 },
   { id: 3, name: "Captain America", topics: 2 },
   { id: 4, name: "Data Structure", topics: 2 },
