@@ -1,0 +1,342 @@
+/* -------------------- */
+/* YELLOW SECTION – super thin height */
+/* -------------------- */
+.footer-app-section {
+  width: 100%;
+  background: #ffc727;
+  padding: 6px 0;              
+  position: relative;
+  overflow: visible;
+}
+
+/* 3-column flexible layout */
+.footer-app-container {
+  max-width: 1300px;
+  margin: auto;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: relative;
+}
+
+/* PHONE IMAGE */
+.footer-phone-holder {
+  flex: 1;
+  display: flex;
+  justify-content: center;     
+}
+
+.footer-phone-img {
+  width: 290px;
+  margin-top: -110px;          
+  margin-bottom: -110px;
+}
+
+/* CENTER TEXT BLOCK */
+.footer-center-text {
+  flex: 1;
+  text-align: left;
+  padding-left: 40px; 
+}
+
+/* TOP MOTORS heading */
+.footer-center-text h3 {
+  margin: 0 0 6px 0; 
+  font-size: 30px;
+  font-weight: 500;  
+}
+
+/* QUOTE LINES */
+.footer-quote-text {
+  margin: 0;           
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 1.3;   
+}
+
+/* RIGHT SIDE - DOWNLOAD SECTION */
+.footer-download-section {
+  flex: 1;
+  text-align: left;
+}
+
+.get-app-now {
+  font-size: 18px;
+  font-weight: 500;    
+  margin-bottom: 16px; 
+}
+
+.store-buttons {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  height: 50px;        
+}
+
+.store-buttons img {
+  height: 100%;         
+  object-fit: contain;
+}
+
+/* -------------------- */
+/* BLUE SECTION STYLES */
+/* -------------------- */
+.footer-blue-section {
+  background-color: #03205a;
+  color: #fff;
+  padding: 40px 50px;
+}
+
+/* Entire row arranged in 3 columns */
+.footer-blue-content {
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 80px;
+}
+
+/* LEFT COLUMN */
+.footer-left-group {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  flex: 0 0 auto;
+  min-width: 320px;
+  margin-left: 60px; 
+  padding: 80px; 
+}
+
+.footer-brand-logo {
+  width: 110px;
+  margin-bottom: 0;
+}
+
+/* EMAIL BOX */
+.email-box {
+  display: flex;
+  flex-direction: row;
+  border: 1px solid #fff;
+  border-radius: 50px; 
+  overflow: hidden;    
+  max-width: 280px;    
+}
+
+.email-box input {
+  flex: 1;
+  padding: 8px 12px;
+  border: none;
+  outline: none;
+  background-color: transparent; 
+  color: #fff;                   
+  font-size: 14px;
+}
+
+.email-box button {
+  padding: 8px 12px;
+  border: none;
+  background-color: transparent; 
+  color: #fff;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.email-box button:hover {
+  background-color: #fff;  
+  color: #03205a;
+}
+
+/* RIGHT COLUMNS – Vehicles + Others */
+.footer-links-container {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin-left: 50px;
+  margin-top: 5px;
+}
+
+.footer-links {
+  display: flex;
+  flex-direction: column;
+}
+
+/* ⭐ CHANGE #1 → Make headings yellow */
+.footer-links h4 {
+  margin-bottom: 8px;
+  color: #ffc727;      /* <-- UPDATED ONLY THIS */
+}
+
+.footer-links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.footer-links li {
+  margin-bottom: 4px;
+}
+
+/* LINE */
+.footer-line {
+  border-top: 1px solid #fff;
+
+  /* ⭐ CHANGE #2 → Reduce extra space */
+  margin: 5px 0 10px 0;   /* was 20px 0 — now tighter */
+}
+
+/* COPYRIGHT LEFT ALIGNED */
+.copyright {
+  text-align: left; 
+  font-size: 14px;
+}
+
+/* -------------------- */
+/* RESPONSIVE */
+/* -------------------- */
+@media (max-width: 900px) {
+  .footer-app-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 10px;
+  }
+
+  .footer-phone-img {
+    margin-top: -80px;
+    margin-bottom: -80px;
+  }
+
+  .footer-download-section {
+    text-align: center;
+  }
+
+  .store-buttons {
+    justify-content: center;
+  }
+
+  .footer-blue-content {
+    display: flex;
+    flex-direction: row;
+    align-items: flex-start;
+  }
+
+  .footer-links-container {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .email-box {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  .footer-phone-img {
+    width: 180px;
+    margin-top: -60px;
+    margin-bottom: -60px;
+  }
+
+  .store-buttons {
+    height: 40px;
+  }
+
+  .email-box {
+    width: 100%;
+  }
+
+  .footer-links-container {
+    width: 100%;
+    gap: 15px;
+  }
+}
+/* -------------------- */
+/* RESPONSIVE FIXED */
+/* -------------------- */
+
+/* TABLET */
+@media (max-width: 992px) {
+
+  /* Keep yellow section centered */
+  .footer-app-container {
+    flex-direction: column;
+    text-align: center;
+    gap: 20px;
+  }
+
+  .footer-center-text {
+    padding-left: 0;
+  }
+
+  .footer-download-section {
+    text-align: center;
+  }
+
+  .store-buttons {
+    justify-content: center;
+  }
+
+  /* BLUE SECTION — stack the layout */
+  .footer-blue-content {
+    flex-direction: column;      /* STACK */
+    align-items: center;
+    gap: 40px;
+  }
+
+  /* Remove big padding so it doesn't push down */
+  .footer-left-group {
+    padding: 20px !important;    /* was 80px */
+    margin-left: 0 !important;
+    align-items: center;
+  }
+
+  .email-box {
+    max-width: 260px;
+  }
+
+  /* Links center aligned */
+  .footer-links-container {
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+    margin-left: 0;
+  }
+
+  .footer-links {
+    text-align: center;
+  }
+}
+
+/* MOBILE */
+@media (max-width: 576px) {
+
+  .footer-phone-img {
+    width: 170px;
+    margin-top: -40px;
+    margin-bottom: -40px;
+  }
+
+  .footer-left-group {
+    padding: 10px !important;
+  }
+
+  .footer-brand-logo {
+    width: 90px;
+  }
+
+  .email-box {
+    width: 100%;
+    max-width: 260px;
+  }
+
+  .footer-links-container {
+    width: 100%;
+    gap: 25px;
+  }
+
+  .footer-links ul li {
+    margin-bottom: 6px;
+  }
+
+  .footer-line {
+    margin-top: 20px;
+  }
+}

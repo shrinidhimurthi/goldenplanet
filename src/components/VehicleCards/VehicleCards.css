@@ -1,0 +1,173 @@
+/* ----------------------------- */
+/* VEHICLE CARDS SECTION         */
+/* ----------------------------- */
+
+.vehicle-section {
+  background-color: #03205a;
+  padding: 80px 50px 130px 50px;
+}
+
+/* Grid */
+.image-grid {
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  gap: 30px;
+}
+
+/* Card */
+.img-box {
+  position: relative;
+  background: #0b2a63;
+  border-radius: 16px;
+  padding: 4px;
+}
+
+/* Tags */
+.img-tag {
+  position: absolute;
+  top: 10px;
+  left: 6px;
+  padding: 4px 8px;
+  border-radius: 6px;
+  font-size: 10px;
+  font-weight: 600;
+  color: white;
+  text-transform: uppercase;
+  z-index: 10;
+}
+
+.img-tag.bid {
+  background-color: #1e90ff;
+}
+
+.img-tag.fixed {
+  background-color: #28a745;
+}
+
+/* Image */
+.vehicle-img {
+  width: 100%;
+  height: 160px;
+  object-fit: cover;
+  border-radius: 12px;
+}
+
+/* Description */
+.img-desc {
+  margin-top: 8px;
+  color: #ffffff;
+  padding: 0 6px 8px 6px;
+  font-family: Arial, sans-serif;
+}
+
+.img-desc .model {
+  font-size: 14px;
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+.img-desc .details {
+  font-size: 12px;
+  color: #cccccc;
+  margin-bottom: 4px;
+}
+
+.img-desc .price {
+  font-size: 13px;
+  font-weight: 600;
+  color: #f1ab08;
+}
+
+/* Load More button */
+.load-more-wrapper {
+  display: flex;
+  justify-content: center;
+  margin: 40px 0;
+}
+
+.load-more-btn {
+  background-color: #f1ab08;
+  border: none;
+  padding: 12px 40px;
+  border-radius: 25px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: 0.3s;
+}
+
+.load-more-btn:hover {
+  background-color: #d99605;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE GRID               */
+/* ----------------------------- */
+
+/* ≤1300px: 4 cards */
+@media (max-width: 1300px) {
+  .image-grid {
+    grid-template-columns: repeat(4, 1fr);
+  }
+}
+
+/* ≤1000px: 3 cards */
+@media (max-width: 1000px) {
+  .image-grid {
+    grid-template-columns: repeat(3, 1fr);
+  }
+
+  .img-desc .model { font-size: 13px; }
+  .img-desc .details { font-size: 11px; }
+  .img-desc .price { font-size: 12px; }
+}
+
+/* ≤700px: 2 cards */
+@media (max-width: 700px) {
+  .image-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .vehicle-section {
+    padding: 50px 20px 80px 20px;
+  }
+
+  .vehicle-img {
+    height: 140px;
+  }
+
+  .img-desc .model { font-size: 12px; }
+  .img-desc .details { font-size: 10px; }
+  .img-desc .price { font-size: 11px; }
+
+  .load-more-btn {
+    padding: 10px 30px;
+    font-size: 14px;
+  }
+}
+
+/* ≤500px: 1 card */
+@media (max-width: 500px) {
+  .image-grid {
+    grid-template-columns: 1fr;
+    gap: 15px;
+  }
+
+  .vehicle-section {
+    padding: 40px 15px 60px 15px;
+  }
+
+  .vehicle-img {
+    height: 120px;
+  }
+
+  .img-desc .model { font-size: 11px; }
+  .img-desc .details { font-size: 9px; }
+  .img-desc .price { font-size: 10px; }
+
+  .load-more-btn {
+    padding: 8px 20px;
+    font-size: 13px;
+  }
+}

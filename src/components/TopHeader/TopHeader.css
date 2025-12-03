@@ -1,0 +1,209 @@
+/* ----------------------------- */
+/* TOP HEADER STYLES             */
+/* ----------------------------- */
+
+.top-header {
+  background-color: #f1ab08;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 12px 100px;
+  border-bottom: 2.5px solid #c58700;
+  flex-wrap: wrap;
+}
+
+/* Left Section */
+.header-left {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.header-box {
+  display: flex;
+  align-items: center;
+  background-color: rgba(255, 255, 255, 0.2);
+  padding: 5px 15px;
+  border-radius: 20px;
+  font-weight: 500;
+  color: #fff;
+  gap: 5px;
+}
+
+.header-box input {
+  border: none;
+  outline: none;
+  background: transparent;
+  color: #fff;
+  width: 100%;
+  max-width: 200px;
+}
+
+.header-box .icon {
+  color: #fff;
+}
+
+/* Center Section: Brand Logo */
+.header-center {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex-shrink: 0;
+}
+
+.brand-logo {
+  width: 150px;
+  height: 150px;
+  object-fit: contain;
+  margin-bottom: 5px;
+}
+
+/* Right Section */
+.header-right {
+  display: flex;
+  align-items: center;
+  gap: 15px;
+  flex-wrap: wrap;
+}
+
+.post-ad-btn {
+  background-color: #05186e;
+  color: #fff;
+  border: none;
+  padding: 8px 15px;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: 500;
+  white-space: nowrap;
+}
+
+.notification {
+  position: relative;
+  font-size: 20px;
+  color: #fff;
+  cursor: pointer;
+}
+
+.notif-count {
+  position: absolute;
+  top: -5px;
+  right: -5px;
+  background-color: red;
+  color: #fff;
+  font-size: 12px;
+  width: 16px;
+  height: 16px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.user-profile {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  color: #fff;
+  cursor: pointer;
+  white-space: nowrap;
+}
+
+.user-img {
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  object-fit: cover;
+}
+
+/* ----------------------------- */
+/* RESPONSIVE STYLES             */
+/* ----------------------------- */
+
+/* Tablet (max-width: 992px) */
+@media (max-width: 992px) {
+  .top-header {
+    padding: 12px 40px;
+  }
+
+  .brand-logo {
+    width: 110px;
+    height: 110px;
+  }
+
+  .header-right .user-name {
+    display: none;
+  }
+
+  .header-box input {
+    max-width: 150px;
+  }
+}
+
+/* Mobile (max-width: 768px) */
+@media (max-width: 768px) {
+  .top-header {
+    flex-direction: column;
+    gap: 15px;
+    padding: 15px 20px;
+    align-items: flex-start;
+  }
+
+  .header-left,
+  .header-right {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .brand-logo {
+    width: 90px;
+    height: 90px;
+  }
+
+  .header-box {
+    padding: 4px 10px;
+  }
+
+  .header-box input {
+    max-width: 120px;
+  }
+
+  .post-ad-btn {
+    padding: 6px 12px;
+  }
+}
+
+/* Small Phones (max-width: 480px) */
+@media (max-width: 480px) {
+  .header-left {
+    flex-direction: column;
+    gap: 5px;
+    align-items: flex-start;
+  }
+
+  .header-right {
+    gap: 5px;
+    flex-wrap: wrap;
+    justify-content: flex-start;
+  }
+
+  .brand-logo {
+    width: 75px;
+    height: 75px;
+  }
+
+  .header-box input {
+    max-width: 100%;
+  }
+
+  .post-ad-btn,
+  .notification {
+    font-size: 12px;
+    padding: 4px 8px;
+  }
+
+  .user-profile span,
+  .user-profile svg {
+    display: none;
+  }
+}

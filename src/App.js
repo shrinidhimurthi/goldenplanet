@@ -1,5 +1,27 @@
-// src/App.js
-import React from "react";
+import React from 'react';
+import TopHeader from './components/TopHeader/TopHeader';
+import MainMenu from './components/MainMenu/MainMenu';
+
+import VehicleCards from './components/VehicleCards/VehicleCards';
+import SiteFooter from './components/SiteFooter/SiteFooter';
+
+function App() {
+  return (
+    <div className="App">
+      <TopHeader />
+      <MainMenu />
+      <VehicleCards />
+      <SiteFooter />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+// icleaf -sidebar,data-table-component design
+/* import React from "react";
 import LManageSubject from "./components/LManageSubject/LManageSubject";
 
 function App() {
@@ -10,9 +32,9 @@ function App() {
   );
 }
 
-export default App;
+export default App; */
 
-/* import React, { useState, useEffect } from 'react';
+/* import React, { useState, useEffect } from 'react'; // infocaree (sidebar,schedule call)design
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
