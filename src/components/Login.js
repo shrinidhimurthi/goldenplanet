@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import "./Login.css";
 import logo from "../assets/logo.png";
+import axios from "axios";
 
 // Import proper icons
 import { FaEnvelope, FaLock, FaEye, FaEyeSlash } from "react-icons/fa";
@@ -9,6 +10,7 @@ export default function Login() {
   const [form, setForm] = useState({ username: "", password: "" });
   const [errors, setErrors] = useState({});
   const [showPassword, setShowPassword] = useState(false);
+  const [apiData, setApiData] = useState(null); // store API response
 
   const handleChange = (e) => {
     const { name, value } = e.target;
@@ -23,13 +25,38 @@ export default function Login() {
     return err;
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const validationErrors = validate();
     setErrors(validationErrors);
+
     if (Object.keys(validationErrors).length === 0) {
-      console.log("Form submitted:", form);
-      alert("Login successful (demo)");
+      try {
+        // Prepare payload with null lat, long, ip
+        const data = {
+          userName: form.username,
+          password: form.password,
+          latitude: null,
+          longitude: null,
+          ipAddress: null
+        };
+
+        const response = await axios.post(
+          "http://156.67.110.83:7080/user/login",
+          data,
+          {
+            headers: {
+              Authorization: `Bearer eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiIxIiwiZW1haWwiOiJzYW5qdW11cnVnYW4yMDAyQGdtYWlsLmNvbSIsImlkIjoxLCJyb2xlIjpbIkFETUlOIl0sImlhdCI6MTc2NDkxNjczNCwiZXhwIjoxNzY0OTE4NTM0fQ.gHb1kEt0Lgt9nT9uEMvrCXEyHf9HY1IYZTX1OCA63zM.`
+            }
+          }
+        );
+
+        console.log("API response:", response.data);
+        setApiData(response.data);
+      } catch (error) {
+        console.error("API error:", error);
+        alert("Login failed. Check console for details.");
+      }
     }
   };
 
@@ -105,9 +132,46 @@ export default function Login() {
         <button type="submit" className="gp-login-btn">
           Login
         </button>
-
       </form>
+
+      {/* API Response Table */}
+      {apiData && (
+        <div style={{ width: "90%", maxWidth: "800px", marginTop: "30px" }}>
+          <h3>API Response</h3>
+          <table
+            style={{
+              width: "100%",
+              borderCollapse: "collapse",
+              textAlign: "left"
+            }}
+          >
+            <thead>
+              <tr>
+                {Object.keys(apiData).map((key) => (
+                  <th
+                    key={key}
+                    style={{ border: "1px solid #ccc", padding: "8px" }}
+                  >
+                    {key}
+                  </th>
+                ))}
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                {Object.values(apiData).map((value, idx) => (
+                  <td
+                    key={idx}
+                    style={{ border: "1px solid #ccc", padding: "8px" }}
+                  >
+                    {JSON.stringify(value)}
+                  </td>
+                ))}
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      )}
     </div>
   );
 }
-

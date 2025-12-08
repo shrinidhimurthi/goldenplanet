@@ -1,4 +1,23 @@
-import React from 'react';
+import React from "react";
+import Login from "./components/Login";
+
+function App() {
+  return (
+    <div>
+      <Login />
+    </div>
+  );
+}
+
+export default App;
+
+
+
+
+
+// Topmotor design - vehicle list 
+
+/*import React from 'react';
 import TopHeader from './components/TopHeader/TopHeader';
 import MainMenu from './components/MainMenu/MainMenu';
 
@@ -16,11 +35,12 @@ function App() {
   );
 }
 
-export default App;
+export default App; */
 
 
 
 // icleaf -sidebar,data-table-component design
+
 /* import React from "react";
 import LManageSubject from "./components/LManageSubject/LManageSubject";
 
@@ -34,7 +54,10 @@ function App() {
 
 export default App; */
 
-/* import React, { useState, useEffect } from 'react'; // infocaree (sidebar,schedule call)design
+
+// infocaree (sidebar,schedule call)design
+
+/* import React, { useState, useEffect } from 'react'; 
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import Navbar from './components/Navbar/Navbar';
 import Sidebar from './components/Sidebar/Sidebar';
